@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bloom & Beau</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<script src="https://kit.fontawesome.com/182e3472d1.js" crossorigin="anonymous"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: Georgia, 'Times New Roman', Times, serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body, html {
+          height: 100%;
+          font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        
+        .bgimg {
+          background-position: center;
+          background-size: cover;
+          background-image: url("background1.jpg");
+          min-height: 80%;
+        }
+
+         /* Custom background color for navigation bar */
+      .w3-top {
+        background-color:burlywood;
+      }
+  
+      /* Custom color for buttons */
+      .w3-button {
+        background-color:burlywood; 
+        color:black;
+      }
+
+      .w3-container.w3-white {
+    width: 100%;  /* Make each container fill its parent container */
+    height: 280px; /* Set a fixed height */
+    box-sizing: border-box;  /* Include padding in height/width calculation */
+}
+      
+        .menu {
+          display: none;
+        }
+
+        #scrollTopBtn {
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          border: none;
+          outline: none;
+          background-color: burlywood;
+          color: white;
+          cursor: pointer;
+          padding: 10px 15px;
+          border-radius: 5px;
+          font-size: 18px;
+        }
+</style>
+</head>
+
+<body>
+    <!-- Scroll-to-Top Button -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" style="display:none;">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- JavaScript -->
+<script>
+window.onscroll = function() {
+  scrollFunction();
+}
+
+function scrollFunction() {
+  const topButton = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+</body>
+   
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-row w3-padding w3-block">
+      <div class="w3-col s3">
+        <a href="#home" class="w3-button w3-block">Home</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#flowers" class="w3-button w3-block">Flowers</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#bouquets" class="w3-button w3-block">Bouquets</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#about" class="w3-button w3-block">About</a>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Header with image -->
+<header class="bgimg w3-display-container">
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Bloom & Beau</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container" id="home">
+    <div class="w3-content" style="max-width:800px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-wide">Know more about beautiful flowers on bouquets</span></h5>
+      <p>Welcome to our vibrant world of flowers! Whether you're a seasoned gardener or just starting your green journey, my website offers a rich collection of information and resources to help you explore about the popular flowers that are usually on bouquets that makes them beautiful. My website provides the details and meanings of the flowers to makes sure you use the right flower for the right occasion.</p>
+      <p>Dive into the wonders of the flower world and let me guide you in making your mind flourish.</p>
+      <div class="w3-panel w3-leftbar w3-light-grey">
+        <p><i>Blooming Beauty to Your Garden, One Flower at a Time.</i></p>
+      </div>
+      <img src="home.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    </div>
+  </div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id="flowers">
+    <h5 class="w3-center w3-padding-64"><span class="w3-wide">FLOWERS</span></h5>
+  
+  <!-- First Photo Grid-->
+<div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-third">
+        <img src="baby breath.jpg" alt="Baby's Breath" style="width:100%">
+        <div class="w3-container w3-white">
+        <h3>Baby's Breath</h3>
+        <ul style="text-align: left;">
+          <li><b>Scientific name:</b> Gypsophila</li>
+          <li><b>Symbolism:</b> Purity, innocence, and everlasting love.</li>
+          <li><b>Uses:</b> Often used as filler flowers in bouquets.</li>
+          <li><b>Care tips:</b> Thrives in sunny spots with well-draining soil.</li>
+        </ul>
+        </div>
+    </div>
+    <div class="w3-third">
+        <img src="carnation.jpg" alt="Carnation" style="width:100%">
+        <div class="w3-container w3-white">
+        <h3>Carnation</h3>
+        <ul style="text-align: left;">
+          <li><b>Scientific name:</b> Dianthus</li>
+          <li><b>Symbolism:</b> Love, admiration, and distinction.</li>
+          <li><b>Care tips:</b> Requires regular watering and prefers partial to full sun.</li>
+        </ul>
+        </div>
+    </div>
+    <div class="w3-third">
+        <img src="tulips.jpg" alt="Tulips" style="width:100%">
+        <div class="w3-container w3-white">
+        <h3>Tulips</h3>
+        <ul style="text-align: left;">
+          <li><b>Symbolism:</b> Perfect love and springtime renewal.</li>
+          <li><b>Colors:</b> Available in almost every color.</li>
+          <li><b>Care tips:</b> Plant bulbs in well-draining soil; they need cold winters to bloom.</li>
+        </ul>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-third">
+        <img src="roses.jpg.webp" alt="Roses" style="width:100%">
+        <div class="w3-container w3-white">
+        <h3>Roses</h3>
+        <ul style="text-align: left;">
+          <li><b>Scientific name:</b> Rosa</li>
+          <li><b>Symbolism:</b> Love, passion, and beauty, varying by color.</li>
+          <li><b>Types:</b> Hybrid tea, climbing roses, miniature roses, etc.</li>
+          <li><b>Care tips:</b> Needs full sun, fertile soil, and regular pruning.</li>
+        </ul>
+        </div>
+    </div>
+    <div class="w3-third">
+      <img src="daffodils.jpg" alt="Daffodils" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Daffodils</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Narcissus</li>
+        <li><b>Symbolism:</b> New beginnings and hope.</li>
+        <li><b>Colors:</b> Typically yellow or white</li>
+        <li><b>Care tips:</b> Easy to grow; plant bulbs in autumn for spring blooms.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="dahlia.jpg" alt="Dahlia" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Dahlia</h3>
+      <ul style="text-align: left;">
+        <li><b>Symbolism:</b> Elegance, inner strength, and creativity.</li>
+        <li><b>Colors:</b> Vibrant shades, from soft pastels to deep reds and purples.</li>
+        <li><b>Care tips:</b> Likes full sun and well-draining, fertile soil.</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Third Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-third">
+      <img src="orchid.jpg" alt="Orchid" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Orchid</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Orchidaceae</li>
+        <li><b>Symbolism:</b> Luxury, love, and beauty.</li>
+        <li><b>Colors:</b> White, purple, pink, and many more.</li>
+        <li><b>Care tips:</b> Needs indirect sunlight, high humidity, and consistent watering.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="sunflower.jpg" alt="Sunflower" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Sunflower</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Helianthus</li>
+        <li><b>Symbolism:</b> Happiness, loyalty, and vitality.</li>
+        <li><b>Care tips:</b> Thrives in full sun and well-draining soil.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="peonies.jpg" alt="Peonies" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Peonies</h3>
+      <ul style="text-align: left;">
+        <li><b>Symbolism:</b> Prosperity, romance, and good fortune.</li>
+        <li><b>Colors:</b> Pink, white, red, and yellow.</li>
+        <li><b>Care tips:</b> Loves full sun and rich, well-draining soil.</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-third">
+      <img src="lilies.jpg" alt="Lilies" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Lilies</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Lilium</li>
+        <li><b>Symbolism:</b> Purity and refined beauty.</li>
+        <li><b>Varieties:</b> Asiatic, Oriental, and Trumpet lilies.</li>
+        <li><b>Care tips:</b> Requires well-draining soil and plenty of sunlight.
+        </li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="hydrangea.jpg" alt="Hydrangea" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Hydrangea</h3>
+      <ul style="text-align: left;">
+        <li><b>Symbolism:</b> Gratitude, abundance, and heartfelt emotion.</li>
+        <li><b>Colors:</b>  Blue, pink, white, and purple, influenced by soil pH.</li>
+        <li><b>Care tips:</b> Prefers partial shade and moist, well-draining soil.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="daisies.jpg" alt="Daisies" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Daisies</h3>
+      <ul style="text-align: left;">
+        <li><b>Symbolism:</b> Innocence, purity, and new beginnings.</li>
+        <li><b>Care tips:</b> Thrives in full sun with regular watering.</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Fifth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-third">
+      <img src="calla lily.jpg" alt="Calla Lily" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Calla Lily</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Zantedeschia</li>
+        <li><b>Symbolism:</b> Elegance, purity, and rebirth.</li>
+        <li><b>Colors:</b> White, pink, yellow, and purple.</li>
+        <li><b>Care tips:</b> Needs moist soil and bright, indirect sunlight.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="lavender.jpg" alt="Lavender" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Lavender</h3>
+      <ul style="text-align: left;">
+        <li><b>Scientific name:</b> Lavandula</li>
+        <li><b>Symbolism:</b> Serenity, grace, and devotion.</li>
+        <li><b>Uses:</b> Aromatherapy and culinary purposes.</li>
+        <li><b>Care tips:</b> Requires full sun and well-draining soil.</li>
+      </ul>
+      </div>
+    </div>
+    <div class="w3-third">
+      <img src="pansies.jpg" alt="Pansies" style="width:100%">
+      <div class="w3-container w3-white">
+      <h3>Pansies</h3>
+      <ul style="text-align: left;">
+        <li><b>Symbolism:</b> Thoughtfulness and remembrance.</li>
+        <li><b>Colors:</b> A variety of vibrant combinations.</li>
+        <li><b>Care tips:</b> Likes cool weather and rich, well-draining soil.</li>
+      </ul>
+      </div>
+    </div>
+</div>
+
+  <!-- Bouquets Section --> 
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id="bouquets">
+    <h5 class="w3-center w3-padding-64"><span class="w3-wide">BOUQUETS</span></h5>
+
+<!-- First Photo Grid-->
+<div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="posy bouquet.jpg" alt="Posy Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+        <p><b>Posy Bouquet</b></p>
+        <p>These small, round bouquets make charming presents for birthdays, anniversaries, or as a gesture of appreciation. They are generally held in one hand and consist of a tight cluster of buds with minimal foliage, thus offering a delicate and charming aesthetic. Varieties usually included in this arrangement are tulips, daisies, carnations, baby's breath, and sweet peas.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="round.jpg" alt="Round Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+        <p><b>Round Bouquet</b></p>
+        <p>As the name suggests, these compositions are tightly arranged in a sphere. Versatile and suitable for various celebrations, from weddings to formal events, they will look marvellous in your pictures. If you want this style to show its full splendour, choose one type of flower or similar blooms, such as peonies, ranunculus, sunflowers, or gerbera daisies.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="hand tied.jpg" alt="Hand-tied Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+        <p><b>Hand-tied Bouquet</b></p>
+        <p>Created by professional florists from a selection of wildflowers, they are casual and effortless in their appearance. Usually, for this type, daffodils, lavender, delphiniums, lisianthus, and carnations are tied together with ribbon or twine, which adds to the natural, straight-from-the-garden look. Informal occasions are the best for this bouquet style.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+<div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="basket.jpg" alt="Basket Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
+        <p><b>Basket Bouquet</b></p>
+        <p>These charming compositions placed in a basket or a woven box are the epitome of rustic style. While they are most suitable for outdoor events, they can also be integrated into home decor or used as centrepieces for a country-themed occasion. Daisies, sunflowers, pansies, daffodils, and gerberas are the pick of the bunch for this design.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="cascade.jpg" alt="Cascade or Waterfall Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
+        <p><b>Cascade or Waterfall Bouquet</b></p>
+        <p>Well known for their cascading shape, these arrangements gracefully spill over the edges of their containers like a vibrant waterfall. A perfect choice for many grand events, such as weddings, where the bride can make a stunning entrance with a breathtaking floral cascade. Some flowers commonly used for this style are roses, orchids, calla lilies, hydrangeas, and freesias.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="fan.jpg" alt="Fan Bouquet" style="width:100%">
+      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
+        <p><b>Fan Bouquet</b></p>
+        <p>Another unique and striking arrangement, a fan bouquet, is usually spread out to resemble an open fan. They create a dramatic visual impact and are often chosen for formal events, themed parties, and theatrical performances too. Pick roses, carnations, peonies, orchids, or anthuriums for the most beautiful result.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- About Section -->
+<about class="w3-row-padding w3-padding-32" id="about">
+    <div class="w3-half">
+      <h3><b>About</b></h3>
+      <p>Sharifah Nur Batrishia binti Syed Othman | 2318410<br>TMGT 2315 Introduction to Web Technology and Design | Section 1<br>International Islamic University Malaysia (IIUM)</p>
+    </div>
+</about>   
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </footer>
+    
+
+
