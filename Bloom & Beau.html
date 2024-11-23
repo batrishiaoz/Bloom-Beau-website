@@ -63,6 +63,14 @@ body, html {
           border-radius: 5px;
           font-size: 18px;
         }
+
+        #Informal {
+  display: block; /* Show Informal section by default */
+}
+
+#Formal {
+  display: none; /* Hide Formal section initially */
+}
 </style>
 </head>
 
@@ -90,27 +98,41 @@ function scrollFunction() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+// JavaScript to toggle between Informal and Formal sections
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-brown", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-brown";
+}
 </script>
 </body>
    
 <!-- Links (sit on top) -->
 <div class="w3-top">
-    <div class="w3-row w3-padding w3-block">
-      <div class="w3-col s3">
-        <a href="#home" class="w3-button w3-block">Home</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#flowers" class="w3-button w3-block">Flowers</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#bouquets" class="w3-button w3-block">Bouquets</a>
-      </div>
-      <div class="w3-col s3">
-        <a href="#about" class="w3-button w3-block">About</a>
-      </div>
+  <div class="w3-row w3-padding w3-block">
+    <div class="w3-col s3">
+      <a href="#home" class="w3-button w3-block">Home</a>
     </div>
+    <div class="w3-col s3">
+      <a href="#flowers" class="w3-button w3-block">Flowers</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#bouquets" class="w3-button w3-block">Bouquets</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block">About</a>
+    </div>
+  </div>
 </div>
-
 
   <!-- Header with image -->
 <header class="bgimg w3-display-container">
@@ -331,59 +353,75 @@ function scrollToTop() {
     </div>
 </div>
 
-  <!-- Bouquets Section --> 
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id="bouquets">
-    <h5 class="w3-center w3-padding-64"><span class="w3-wide">BOUQUETS</span></h5>
+ <!-- Photo Grid Container -->
+<div class="w3-container" id="bouquets">
+  <div class="w3-content" style="max-width:1000px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-wide">BOUQUETS</span></h5>
+  
+    <!-- First Photo Section (Informal Bouquets) -->
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Informal');" id="informalLink">
+        <div class="w3-col s6 tablink">Informal Bouquets</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Formal');">
+        <div class="w3-col s6 tablink">Formal Bouquets</div>
+      </a>
+    </div>
 
-<!-- First Photo Grid-->
-<div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="posy bouquet.jpg" alt="Posy Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
-        <p><b>Posy Bouquet</b></p>
-        <p>These small, round bouquets make charming presents for birthdays, anniversaries, or as a gesture of appreciation. They are generally held in one hand and consist of a tight cluster of buds with minimal foliage, thus offering a delicate and charming aesthetic. Varieties usually included in this arrangement are tulips, daisies, carnations, baby's breath, and sweet peas.</p>
+    <!-- Informal Bouquets Section -->
+    <div id="Informal" class="w3-container menu w3-padding-48 w3-card">
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="posy bouquet.jpg" alt="Posy Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Posy Bouquet</b></p>
+            <p>These small, round bouquets make charming presents for birthdays, anniversaries, or as a gesture of appreciation. They are generally held in one hand and consist of a tight cluster of buds with minimal foliage, thus offering a delicate and charming aesthetic. Varieties usually included in this arrangement are tulips, daisies, carnations, baby's breath, and sweet peas.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="basket.jpg" alt="Basket Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Basket Bouquet</b></p>
+            <p>These charming compositions placed in a basket or a woven box are the epitome of rustic style. While they are most suitable for outdoor events, they can also be integrated into home decor or used as centerpieces for a country-themed occasion. Daisies, sunflowers, pansies, daffodils, and gerberas are the pick of the bunch for this design.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container">
+          <img src="hand tied.jpg" alt="Hand-tied Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Hand-tied Bouquet</b></p>
+            <p>Created by professional florists from a selection of wildflowers, they are casual and effortless in their appearance. Usually, for this type, daffodils, lavender, delphiniums, lisianthus, and carnations are tied together with ribbon or twine, which adds to the natural, straight-from-the-garden look. Informal occasions are the best for this bouquet style.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="round.jpg" alt="Round Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
-        <p><b>Round Bouquet</b></p>
-        <p>As the name suggests, these compositions are tightly arranged in a sphere. Versatile and suitable for various celebrations, from weddings to formal events, they will look marvellous in your pictures. If you want this style to show its full splendour, choose one type of flower or similar blooms, such as peonies, ranunculus, sunflowers, or gerbera daisies.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="hand tied.jpg" alt="Hand-tied Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
-        <p><b>Hand-tied Bouquet</b></p>
-        <p>Created by professional florists from a selection of wildflowers, they are casual and effortless in their appearance. Usually, for this type, daffodils, lavender, delphiniums, lisianthus, and carnations are tied together with ribbon or twine, which adds to the natural, straight-from-the-garden look. Informal occasions are the best for this bouquet style.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Second Photo Grid-->
-<div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="basket.jpg" alt="Basket Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
-        <p><b>Basket Bouquet</b></p>
-        <p>These charming compositions placed in a basket or a woven box are the epitome of rustic style. While they are most suitable for outdoor events, they can also be integrated into home decor or used as centrepieces for a country-themed occasion. Daisies, sunflowers, pansies, daffodils, and gerberas are the pick of the bunch for this design.</p>
+    <!-- Formal Bouquets Section -->
+    <div id="Formal" class="w3-container menu w3-padding-48 w3-card" style="display:none;">
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="round.jpg" alt="Round Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Round Bouquet</b></p>
+            <p>As the name suggests, these compositions are tightly arranged in a sphere. Versatile and suitable for various celebrations, from weddings to formal events, they will look marvellous in your pictures. If you want this style to show its full splendour, choose one type of flower or similar blooms, such as peonies, ranunculus, sunflowers, or gerbera daisies.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="cascade.jpg" alt="Cascade or Waterfall Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Cascade or Waterfall Bouquet</b></p>
+            <p>Well known for their cascading shape, these arrangements gracefully spill over the edges of their containers like a vibrant waterfall. A perfect choice for many grand events, such as weddings, where the bride can make a stunning entrance with a breathtaking floral cascade. Some flowers commonly used for this style are roses, orchids, calla lilies, hydrangeas, and freesias.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container">
+          <img src="fan.jpg" alt="Fan Bouquet" style="width:100%">
+          <div class="w3-container" style="background-color: antiquewhite; height: 370px;">
+            <p><b>Fan Bouquet</b></p>
+            <p>Another unique and striking arrangement, a fan bouquet, is usually spread out to resemble an open fan. They create a dramatic visual impact and are often chosen for formal events, themed parties, and theatrical performances too. Pick roses, carnations, peonies, orchids, or anthuriums for the most beautiful result.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="cascade.jpg" alt="Cascade or Waterfall Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
-        <p><b>Cascade or Waterfall Bouquet</b></p>
-        <p>Well known for their cascading shape, these arrangements gracefully spill over the edges of their containers like a vibrant waterfall. A perfect choice for many grand events, such as weddings, where the bride can make a stunning entrance with a breathtaking floral cascade. Some flowers commonly used for this style are roses, orchids, calla lilies, hydrangeas, and freesias.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="fan.jpg" alt="Fan Bouquet" style="width:100%">
-      <div class="w3-container" style="background-color: antiquewhite; height: 350px;">
-        <p><b>Fan Bouquet</b></p>
-        <p>Another unique and striking arrangement, a fan bouquet, is usually spread out to resemble an open fan. They create a dramatic visual impact and are often chosen for formal events, themed parties, and theatrical performances too. Pick roses, carnations, peonies, orchids, or anthuriums for the most beautiful result.</p>
-      </div>
-    </div>
-  </div>
+</div>
 
 <!-- About Section -->
 <about class="w3-row-padding w3-padding-32" id="about">
@@ -403,5 +441,7 @@ function scrollToTop() {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </footer>
     
+
+
 
 
